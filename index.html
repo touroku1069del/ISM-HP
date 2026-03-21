@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISM-Marketing-Academy | オンライン起業と集客の自動化</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="オンライン起業と集客の自動化はプロにご相談ください。3日で起業したい方、集客にお困りの方へ。マーケティング、AI活用、コーチング、語学研修など多彩なプログラムを提供。">
+    <meta name="keywords" content="マーケティング, 起業支援, 集客自動化, AI活用, ChatGPT講座, コーチング, カウンセリング, 語学研修, 助成金活用">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a192f;
+            --white: #ffffff;
+            --gold: #c5a059;
+            --gold-hover: #b38e4a;
+            --light-bg: #f8f9fa;
+            --text-dark: #0a192f;
+            --text-muted: #8892b0;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 2.3;
+            color: var(--text-dark);
+            background: var(--white);
+            overflow-x: hidden;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        section {
+            padding: 150px 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 30px 0;
+            background: rgba(10, 25, 47, 0.98);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 5.5rem;
+            margin-bottom: 50px;
+            line-height: 1.1;
+        }
+
+        #hero p {
+            font-size: 2rem;
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        /* Sections */
+        .section-title {
+            font-size: 4rem;
+            color: var(--navy);
+            margin-bottom: 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 5px;
+            background: var(--gold);
+            margin: 40px auto 0;
+        }
+
+        .purple-section {
+            background: #8b00ff;
+            color: var(--white);
+            padding: 150px 0;
+            text-align: center;
+        }
+
+        .purple-section h2 {
+            color: var(--white);
+            margin-bottom: 40px;
+            font-size: 4rem;
+        }
+
+        .purple-section p {
+            font-size: 1.8rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            line-height: 2.2;
+            font-weight: 500;
+        }
+
+        .white-section {
+            background: var(--white);
+        }
+
+        .white-section .btn-link {
+            color: var(--gold);
+            text-decoration: underline;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .navy-section {
+            background: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 180px 0;
+        }
+
+        .navy-section h2 {
+            color: var(--gold);
+            font-size: 4rem;
+            margin-bottom: 50px;
+        }
+
+        .navy-section p {
+            font-size: 1.8rem;
+            margin-bottom: 60px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 2.2;
+        }
+
+        .btn-reservation {
+            background: var(--white);
+            color: var(--navy);
+            padding: 25px 90px;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 700;
+            border-radius: 6px;
+            transition: var(--transition);
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-reservation:hover {
+            background: var(--gold);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        /* Detailed Content */
+        .detail-section {
+            background: #f0f7ff;
+            padding: 180px 0;
+        }
+
+        .service-list {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-group {
+            margin-bottom: 100px;
+            background: var(--white);
+            padding: 80px;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border-left: 12px solid var(--gold);
+        }
+
+        .service-group h3 {
+            font-size: 2.8rem;
+            color: var(--navy);
+            margin-bottom: 50px;
+            border-bottom: 4px solid #eee;
+            padding-bottom: 30px;
+        }
+
+        .service-group p {
+            font-size: 1.6rem;
+            margin-bottom: 35px;
+        }
+
+        .service-group ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-group li {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 50px;
+            font-size: 1.5rem;
+            line-height: 2.2;
+        }
+
+        .service-group li::before {
+            content: '■';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 1.4rem;
+            top: 10px;
+        }
+
+        /* Credentials */
+        .credential-section {
+            background: var(--white);
+            padding: 180px 0;
+        }
+
+        .credential-card {
+            background: var(--light-bg);
+            padding: 80px;
+            border-radius: 8px;
+            border: 2px solid #eee;
+        }
+
+        .credential-list {
+            list-style: none;
+            margin-bottom: 50px;
+        }
+
+        .credential-list li {
+            margin-bottom: 35px;
+            padding-left: 70px;
+            position: relative;
+            font-weight: 500;
+            font-size: 1.7rem;
+            line-height: 2;
+        }
+
+        .credential-list li::before {
+            content: '■';
+            position: absolute;
+            left: 0;
+            color: var(--navy);
+            font-size: 1.5rem;
+            top: 15px;
+        }
+
+        .credential-card p {
+            font-size: 1.6rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            opacity: 0.8;
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+        }
+
+        .copyright {
+            font-size: 1.1rem;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .service-group {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav-inner">
+            <a href="#" class="logo">ISM-Marketing-Academy</a>
+            <ul class="nav-links">
+                <li><a href="#hero">ホーム</a></li>
+                <li><a href="#services">サービス</a></li>
+                <li><a href="#consulting">コンサルティング</a></li>
+                <li><a href="#booking">予約</a></li>
+                <li><a href="#credentials">資格・実績</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="container">
+            <h1>オンライン起業と集客の自動化は<br>プロにご相談ください</h1>
+            <p>3日ですぐに起業したい方、集客にお困りの方、成約に苦労されている方は是非海外と日本で成功法則を研究し長年にわたる経験と実績を持つプロへお気軽にご相談ください。</p>
+        </div>
+    </header>
+
+    <section class="purple-section" id="services">
+        <div class="container">
+            <h2>サービス内容</h2>
+            <p>誇りと愛着を持って働く私にとって、クライアントの目標達成こそが仕事満足度の向上につながります。詳しいサービス内容についてはこちらをご覧ください。</p>
+        </div>
+    </section>
+
+    <section class="white-section" id="consulting">
+        <div class="container">
+            <h2 class="section-title">コンサルティング</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p>私どもの目的は、問題点および見落とされているビジネスチャンスを特定するために、クライアントとその業務内容について正確に把握することです。専門知識と鋭い視点を用い、充実したサポート体制でそれに取り組みます。
+                </p>
+                <p style="margin-top: 30px;">無料コンサルのご相談は<span class="btn-link">コチラ</span>から</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="navy-section" id="booking">
+        <div class="container">
+            <h2>オンライン予約</h2>
+            <p>毎日お忙しい中、お電話での予約は意外と手間がかかるものです。当店では、そんな皆さまの貴重な時間を大切にするため、24時間いつでも即時予約を承っております。夜遅くや移動中など、思い立ったその時に。あなたのご都合に合わせて、下のボタンからスムーズにご予約ください。
+            </p>
+            <a href="#" class="btn-reservation">予約する</a>
+        </div>
+    </section>
+
+    <section class="detail-section">
+        <div class="container">
+            <h2 class="section-title">提供サービス内容：各種講座・コンサルの専門分野について</h2>
+            <div class="service-list">
+                <div class="service-group">
+                    <h3>サービス内容（起業支援、マーケティング、コーチングその他）</h3>
+                    <p>新たなチャレンジは私たちの原動力です。より良いサービス提供を行うことが喜びであり、楽しくも真剣に取り組んでいます。</p>
+
+                    <p style="font-weight: 700; margin-top: 30px;">■ 個人・法人向け各種マーケティングセミナー及びコンサルティングサービス</p>
+                    <ul>
+                        <li>各種Webマーケティングセミナー（Web解析、SNS及びGoogle・Youtube広告、運用アドバイス）</li>
+                        <li>ChatGPT及び各種自動生成AIの初級〜中級コースセミナー 目的別基本のプロンプトのパターン、GPT関数及びAdvanced Data Analysis (Code
+                            Interpreter)を使ったデータの自動グラフ化や図表から自動レポート作成、及び画像・動画生成AIツール活用による広告クリエイティブ作成の基本を習得</li>
+                    </ul>
+
+                    <p style="font-weight: 700; margin-top: 30px;">■ 法人向け研修およびセールスクロージング代行サービス（業務委託契約）</p>
+                    <p>・現在、国が特に力を入れて推進している「人材開発支援助成金」をご存知でしょうか。</p>
+                    <p>研修費用の最大75%が助成されるこの制度は、今まさに活用の大きなチャンスを迎えています。</p>
+                    <p>すでにこの制度を賢く利用してAI人材の育成に成功している企業は、着実に他社との差別化を図り、優位性を築きつつあります。</p>
+                    <p>AI活用における「今」の決断の差が、数年後の競争力に直結すると言っても過言ではありません。</p>
+                    <p>弊社では、助成金申請をサポートするIT企業と提携しており、煩雑な手続きに煩わされることなく制度をご活用いただけます。貴社の状況や予算に合わせた最適なAI研修を厳選してご紹介します。</p>
+                    <p>まずは情報収集からでも、お気軽にご相談ください。</p>
+
+                    <p style="font-weight: 700; margin-top: 30px;">■ 個人及び法人向けカウンセラー養成セミナー及びカウンセリングビジネスのコンサルティング</p>
+                    <ul>
+                        <li>心理検査、発達心理学、家族療法、認知行動療法などを学ぶ臨床心理学の基本からセッションの技法まで・カウンセリングに不可欠なクライアントワーク及びコミュニケーション学</li>
+                    </ul>
+
+                    <p style="font-weight: 700; margin-top: 30px;">■ 個人向けコーチング及びカウンセリングセッション・ビジネスや職場での課題解決のための心理学コーチング
+                    </p>
+                    <ul>
+                        <li>一般向け心理カウンセリング・あがり症克服の方法を学ぶ講座と実践、スピーチ・プレゼン短期上達講座</li>
+                    </ul>
+
+                    <p style="font-weight: 700; margin-top: 30px;">■ 英語その他の語学研修サービス （法人・個人向け）</p>
+                    <ul>
+                        <li>ビジネス英語（プレゼンテーション、ネゴシエーションスキル）講座</li>
+                        <li>英語検定試験対策： 英検１級、TOIEC600/750/900点コース)</li>
+                        <li>スペイン語講座（現地での日常会話からビジネスに必要なスキルまで）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="credential-section" id="credentials">
+        <div class="container">
+            <h2 class="section-title">最新のデジタルマーケティングおよびマーケティング心理学のキャリアと認定資格</h2>
+            <div class="credential-card">
+                <p style="font-weight: 700; margin-bottom: 20px;">■ デジタルマーケティングキャリアと資格</p>
+                <ul class="credential-list">
+                    <li>Webコンサルティングの上級プロフェッショナル（上級ウェブ解析士資格）</li>
+                    <li>Google Adwords資格認定プロフェッショナル（アメリカと日本で資格取得）</li>
+                    <li>Yahoo!プロモーション広告資格認定プロフェッショナル</li>
+                </ul>
+
+                <p style="font-weight: 700; margin-top: 30px; margin-bottom: 20px;">■ マーケティング心理学、コーチング・カウンセラーキャリアと資格</p>
+                <p>米国マーケティング心理学・コーチング歴17年のプロフェッショナル</p>
+                <ul class="credential-list" style="margin-top: 15px;">
+                    <li>全米NLP(神経言語プログラム)協会認定マスタープラクティショナー</li>
+                    <li>日本NLP協会認定マスタープラクティショナー</li>
+                    <li>カナダサクセスストラテジー社認定LABプロファイルプラクティショナー (2005～2010年カナダ・トロント在住)</li>
+                    <li>深層心理学研究のプロフェッショナル 日本プロカウンセラー協会認定１級心理カウンセラー</li>
+                </ul>
+
+                <p style="font-weight: 700; margin-top: 30px; margin-bottom: 20px;">■ 海外での駐在歴10年以上</p>
+                <p>売上数兆円のグローバル企業で海外子会社向けのデジタルマーケティングのコンサルも行っておりますので英語でのコンサルティングサービスもご要望に応じて可能です。</p>
+                <p>法人の方もお気軽にご相談ください。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-section" style="padding-top: 0;">
+        <div class="container" style="max-width: 800px;">
+            <div style="text-align: center;">
+                <h3 style="font-size: 2rem; color: var(--navy); margin-bottom: 20px;">ISMマーケティングアカデミー</h3>
+                <p>所在地 | 〒812-0011 福岡県福岡市博多区博多駅前1-23-2 ParkFront博多駅前5F-B</p>
+                <p>E-mail: ism.marketing.academy@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">概要</a>
+                <a href="legal.html">特定商取引法に基づく表記</a>
+                <a href="privacy.html">プライバシーポリシー</a>
+                <a href="#">Cookie設定</a>
+            </div>
+            <p class="copyright">&copy; 2026 ISM-Marketing-Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
