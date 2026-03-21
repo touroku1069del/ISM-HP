@@ -5,41 +5,166 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ISM Marketing Academy</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
+
+  <!-- ナビゲーション -->
+  <nav id="navbar">
     <div class="container">
-      <h1>ISM Marketing Academy</h1>
+      <a href="index.html" class="logo">ISM-Marketing-Academy</a>
+      <div class="nav-links">
+        <a href="#hero">ホーム</a>
+        <a href="#services">サービス</a>
+        <a href="#credentials">資格・実績</a>
+        <a href="#contact">ご予約・ご相談</a>
+      </div>
     </div>
-  </header>
+  </nav>
+
+  <!-- ヒーローセクション -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content" style="z-index: 10; position: relative;">
+      <h1>実践的な<br>マーケティングを、<br>あなたの手に。</h1>
+      <p class="hero-subtext">3日ですぐに起業したい方、集客にお困りの方へ。<br>海外と日本で成功法則を研究し、長年にわたる経験と実績を持つプロへお気軽にご相談ください。</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-gold btn-large">無料コンサルを予約する</a>
+        <a href="#services" class="btn btn-white btn-large">サービスを見る</a>
+      </div>
+    </div>
+  </section>
 
   <main>
-    <section class="hero">
+    <!-- 提供サービス -->
+    <section id="services" class="section bg-light">
       <div class="container">
-        <h2>実践的なマーケティングを、あなたの手に。</h2>
-        <p class="lead">デジタルマーケティングのプロフェッショナルが教える、即戦力のスキルアップ講座。</p>
+        <h2 class="section-title text-center">各種講座・コンサルの専門分野</h2>
+
+        <div class="service-detail-box">
+          <h3 class="box-subtitle">サービス内容（起業支援、マーケティング、コーチング）</h3>
+          <p class="accent-para">新たなチャレンジは私たちの原動力です。より良いサービス提供を行うことが喜びであり、楽しくも真剣に取り組んでいます。</p>
+
+          <div class="point-group">
+            <h4>個人・法人向け 各種マーケティングセミナー及びコンサル</h4>
+            <ul class="bullet-list">
+              <li>各種Webマーケティングセミナー（Web解析、SNS及びGoogle・Youtube広告、運用アドバイス）</li>
+              <li>ChatGPT及び各種自動生成AIの初級〜中級コースセミナー、画像・動画生成AIツール活用による広告クリエイティブ作成の基本を習得</li>
+            </ul>
+          </div>
+
+          <div class="point-group">
+            <h4>法人向け研修およびセールスクロージング代行サービス</h4>
+            <ul class="bullet-list">
+              <li>国の助成金（人材開発支援助成金）を活用したAI人材の育成プログラム</li>
+              <li>煩雑な手続きに煩わされることなく制度をご活用いただける提携IT企業のご紹介</li>
+            </ul>
+          </div>
+
+          <div class="point-group">
+            <h4>個人及び法人向けカウンセラー養成・コーチング</h4>
+            <ul class="bullet-list">
+              <li>心理検査、発達心理学、認知行動療法などを学ぶ臨床心理学の基本からセッションの技法</li>
+              <li>一般向け心理カウンセリング・ビジネスや職場での課題解決のための心理学コーチング</li>
+            </ul>
+          </div>
+
+          <div class="point-group">
+            <h4>語学研修サービス（法人・個人向け）</h4>
+            <ul class="bullet-list">
+              <li>ビジネス英語（プレゼンテーション、ネゴシエーションスキル）講座</li>
+              <li>英語検定試験対策（英検１級、TOEIC高得点コース）やスペイン語講座</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="features">
+    <!-- プロフィール・実績 -->
+    <section id="credentials" class="section">
       <div class="container">
-        <h3>選ばれる3つの理由</h3>
-        <ul>
-          <li>現場で使える最新のデジタルマーケティング技術</li>
-          <li>Amazon USなどのグローバル展開を支援するノウハウ</li>
-          <li>一人ひとりに寄り添うプロフェッショナルなコーチング</li>
-        </ul>
+        <h2 class="section-title text-center">最新のデジタルマーケティングと<br>心理学のキャリア・認定資格</h2>
+
+        <div class="grid">
+          <div>
+            <div class="mb-40">
+              <p class="large-text">■ デジタルマーケティングのキャリアと資格</p>
+              <ul class="credentials-list">
+                <li>Webコンサルティングの上級プロフェッショナル（上級ウェブ解析士資格）</li>
+                <li>Google Adwords資格認定プロフェッショナル（米・日）</li>
+                <li>Yahoo!プロモーション広告資格認定</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="large-text">■ マーケティング心理学・コーチング（歴17年）</p>
+              <ul class="credentials-list">
+                <li>全米/日本NLP協会認定マスタープラクティショナー</li>
+                <li>カナダサクセスストラテジー社認定 LABプロファイルプラクティショナー</li>
+                <li>日本プロカウンセラー協会認定 １級心理カウンセラー</li>
+              </ul>
+            </div>
+
+            <div class="founder-info">
+              <h3 class="founder-name">Overseas Experience <span>海外でのキャリア</span></h3>
+              <p class="founder-title mt-30">
+                海外での駐在歴10年以上。売上数兆円のグローバル企業で、海外子会社向けのデジタルマーケティングコンサルティングも行っており、英語でのコンサルも対応可能です。</p>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
+              alt="Consulting" style="width: 100%; max-width: 500px; border-radius: 8px;" class="shadow-gold">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 予約・連絡先 -->
+    <section id="contact" class="section bg-light text-center">
+      <div class="container max-800">
+        <h2 class="section-title">お問い合わせ・オンライン予約</h2>
+        <p class="large-text">毎日お忙しい中、24時間ご都合のよいタイミングでご予約可能です。無料コンサルや各プログラムについて、お気軽にご相談ください。</p>
+        <div class="mt-50">
+          <a href="#" class="btn btn-gold btn-large">無料コンサルを予約する</a>
+        </div>
+
+        <div class="mt-50" style="padding-top: 40px; border-top: 1px solid #ddd;">
+          <h3 style="margin-bottom: 20px;">ISMマーケティングアカデミー</h3>
+          <p>〒812-0011 福岡県福岡市博多区博多駅前1-23-2 ParkFront博多駅前5F-B</p>
+          <p class="gold-text-link mt-30">ism.marketing.academy@gmail.com</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 ISM Marketing Academy. All rights reserved.</p>
+      <div class="footer-top">
+        <div class="footer-logo">ISM-Marketing-Academy</div>
+        <div class="footer-nav">
+          <a href="#hero">ホーム</a>
+          <a href="#services">サービス</a>
+          <a href="#credentials">資格・実績</a>
+          <a href="#contact">ご予約</a>
+        </div>
+      </div>
+
+      <div class="legal-links">
+        <a href="legal.html">特定商取引法に基づく表記</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="#">Cookie設定</a>
+      </div>
+
+      <p class="text-center copyright">&copy; 2026 ISM Marketing Academy. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
